@@ -120,7 +120,7 @@ export function DropdownMenu({
                                 if (!isMulti) {
                                 }
                             }}
-                            className={`${(styles.eiFilterDropdownItem, (isSelected(option) || (selectedOptionsCount === options.length)) && styles.eiFilterDropdownItemSelected)}`}>
+                            className={styles.eiFilterDropdownItem}>
                             {isMulti ?
                                 <section className={styles.eiFilterCustomCheckbox}>
                                     <input readOnly
@@ -151,7 +151,7 @@ export function DropdownMenu({
                                 if (!isMulti) {
                                 }
                             }}
-                            className={`${(styles.eiFilterDropdownItem, isSelected(option) && styles.eiFilterDropdownItemSelected)}`}>
+                            className={styles.eiFilterDropdownItem}>
                             {isMulti ?
                                 <section className={styles.eiFilterCustomCheckbox}>
                                     <input readOnly
