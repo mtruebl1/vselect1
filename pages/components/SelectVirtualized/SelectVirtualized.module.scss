@@ -1,0 +1,161 @@
+@import '../../cssUtils/_variables.scss';
+
+.noResultsFound {
+  padding: 0 1rem;
+}
+
+.eiFilterDropdownContainer {
+  text-align: left;
+  position: relative;
+  min-height: 2.5rem;
+  color: $ei-element-dark-skeleton-gradient;
+  background: var(--pf-global--Color--light-100);
+  display: flex;
+  align-items: center;
+}
+
+.eiFilterDropdownInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  flex: 1;
+}
+
+.eiFilterDropdownDisplayContainer {
+  padding: 0.5635rem 1.0625rem 0.5635rem 0.6875rem;
+  width: 100%;
+  align-self: baseline;
+  height: 100%;
+}
+
+.eiFilterDropdownMenu {
+  position: absolute;
+  top: 5.625rem;
+  left: 0;
+  width: 100%;
+  background-color: var(--pf-global--Color--light-100);
+  z-index: 1;
+}
+
+.eiFilterDropdownItem {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: $ei-accent-color-primary-black;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.625rem;
+  min-height: 1.25rem;
+  border: none;
+  position: relative;
+  &:focus {
+    visibility: visible;
+  }
+  &:hover {
+    background-color: $ei-element-dropdown-option-hover;
+  }
+  &.eiFilterDropdownItemSelected {
+    position: relative;
+    color: $ei-accent-color-primary-black;
+  }
+}
+
+.eiFilterDropdownTools {
+  position: absolute;
+  top: 54%;
+  right: 1rem;
+  transform: translatey(-50%);
+}
+
+.eiFilterDropdownTool {
+  visibility: visible;
+}
+
+.eiFilterDropdownTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3125rem;
+}
+
+.eiFilterDropdownSearchBox {
+  flex: 1 1;
+  padding: 0.3125rem;
+  background-color: var(--pf-global--Color--light-100);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 2.8125rem;
+  z-index: 1;
+  svg {
+    position: absolute;
+    top: 0.9375rem;
+    left: 0.9375rem;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.3125rem;
+    padding-left: 2.1875rem;
+    flex: 1;
+    border: 0.0625rem solid $ei-element-dropdown-search-border;
+    border-radius: 0;
+  }
+}
+
+.eiFilterDropdownItemSelected {
+  visibility: visible;
+}
+
+.eiDropdownScroller {
+  box-shadow: 0 0.375rem 0.625rem -0.25rem rgb(0 0 0 / 50%);
+}
+
+.eiNoSearchDropdownItem {
+  top: 2.8125rem;
+}
+
+.eiFilterCustomCheckbox {
+  display: flex;
+  align-items: center;
+  .eiFilterCustomCheckboxLabel {
+    padding-left: 0.625rem;
+  }
+  .eiFilterSelectedAllOption {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.0625rem;
+      left: 0.0625rem;
+      width: 0.6875rem;
+      height: 0.6875rem;
+      background: $ei-element-dropdown-option-selected;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0.3125rem;
+      left: 0.1875rem;
+      width: 0.4375rem;
+      height: 0.0938rem;
+      background: var(--pf-global--Color--light-100);
+    }
+  }
+}
+
+.eiFilterCustomSelect {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  svg {
+    color: $ei-element-dropdown-option-selected;
+    height: 0.625rem;
+    width: 0.625rem;
+  }
+}
+
+.eiFilterDropdownCurrentSelection {
+  background-color: $ei-element-dropdown-option-hover;
+}
